@@ -1,0 +1,248 @@
+<%- include("layouts/header.ejs") %>
+<section>
+    <!-- <div class="all-page-title page-breadcrumb">
+        <div class="container text-center">
+            <div class="row pt-2">
+                <div class="col-lg-12">
+                    <h1>Contests</h1>
+                    <a
+                        class="btn btn-success"
+                        href="{{ url_for('create_contest') }}"
+                        >Create Contest</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- End All Pages -->
+
+    <!-- Start Menu -->
+    <div class="menu-box pt-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="special-menu text-center">
+                        <div class="button-group filter-button-group">
+                            <button
+                                onclick="ongoing()"
+                                id="coffeeButton"
+                                class="active menu-btn"
+                            >
+                                Live
+                            </button>
+                            <button
+                                onclick="upcoming()"
+                                id="teaButton"
+                                class="menu-btn"
+                            >
+                                Upcoming
+                            </button>
+                            <button
+                                onclick="previous()"
+                                id="smoothieButton"
+                                class="menu-btn"
+                            >
+                                Previous
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LIVE -->
+
+            <div class="row py-md-4 py-0">
+                <div class="col-md-4 col-12 pb-3">
+                    <div class="card menu-item" style="width: 20rem">
+                        <img
+                            class="card-img-top pb-2"
+                            src="https://media-fastly.hackerearth.com/media/hackathon/datastax-holiday-hackathon/images/5e0cc6ea44-Datastax_listing_image.png"
+                            alt="Card image cap"
+                        />
+                        <h5
+                            style="font-size: 19px; line-height: 30px"
+                            class="card-title text-center"
+                        >
+                            Hosted on (Codechef)
+                        </h5>
+                        <ul class="list-group list-group-flush">
+                            <li
+                                style="
+                                    background-color: #fff;
+                                    color: #000;
+                                    font-weight: 600;
+                                    font-size: 20px;
+                                "
+                                class="list-group-item text-center"
+                            >
+                                Contest Name
+                            </li>
+                            <li
+                                style="
+                                    background-color: #fff;
+                                    color: #000;
+                                    font-weight: 600;
+                                "
+                                class="list-group-item text-center"
+                            >
+                                <div>ENDS IN</div>
+                                <div>0 1 : DAY 0 7 : HOURS 1 2 MINUTES</div>
+                            </li>
+                            <li
+                                style="
+                                    background-color: #fff;
+                                    color: #000;
+                                    font-weight: 600;
+                                "
+                                class="list-group-item text-center"
+                            >
+                                <div>Posted By</div>
+                                <div>username</div>
+                            </li>
+
+                            <!-- <li class="list-group-item m-0 p-0">
+                                <a href="#" class="btn order-btn pt-2"
+                                    >register</a
+                                >
+                            </li> -->
+                        </ul>
+
+                        <div class="card-body text-center p-3">
+                            <a href="#" class="btn btn-primary order-btn"
+                                >Register</a
+                            >
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UPCOMING  -->
+
+                <div class="col-md-4 col-12 pb-3">
+                    <div class="card menu-item" style="width: 20rem">
+                        <img
+                            class="card-img-top pb-2"
+                            src="https://media-fastly.hackerearth.com/media/hackathon/datastax-holiday-hackathon/images/5e0cc6ea44-Datastax_listing_image.png"
+                            alt="Card image cap"
+                        />
+                        <h5
+                            style="font-size: 19px; line-height: 30px"
+                            class="card-title text-center"
+                        >
+                            Hosted on (Codechef)
+                        </h5>
+                        <ul class="list-group list-group-flush">
+                            <li
+                                style="
+                                    background-color: #fff;
+                                    color: #000;
+                                    font-weight: 600;
+                                    font-size: 20px;
+                                "
+                                class="list-group-item text-center"
+                            >
+                                Contest Name
+                            </li>
+                            <li
+                                style="
+                                    background-color: #fff;
+                                    color: #000;
+                                    font-weight: 600;
+                                "
+                                class="list-group-item text-center"
+                            >
+                                <div>STARTS ON</div>
+                                <div>Jan 22, 04:00 PM IST</div>
+                            </li>
+                            <li
+                                style="
+                                    background-color: #fff;
+                                    color: #000;
+                                    font-weight: 600;
+                                "
+                                class="list-group-item text-center"
+                            >
+                                <div>Posted By</div>
+                                <div>username</div>
+                            </li>
+
+                            <!-- <li class="list-group-item m-0 p-0">
+                                <a href="#" class="btn order-btn pt-2"
+                                    >register</a
+                                >
+                            </li> -->
+                        </ul>
+
+                        <div class="card-body text-center p-3">
+                            <a href="#" class="btn btn-primary order-btn"
+                                >Register</a
+                            >
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PREVIOUS  -->
+
+                <div class="col-md-4 col-12 pb-3">
+                    <div class="card menu-item" style="width: 20rem">
+                        <img
+                            class="card-img-top pb-2"
+                            src="https://media-fastly.hackerearth.com/media/hackathon/datastax-holiday-hackathon/images/5e0cc6ea44-Datastax_listing_image.png"
+                            alt="Card image cap"
+                        />
+                        <h5
+                            style="font-size: 19px; line-height: 30px"
+                            class="card-title text-center"
+                        >
+                            Hosted on (Codechef)
+                        </h5>
+                        <ul class="list-group list-group-flush">
+                            <li
+                                style="
+                                    background-color: #fff;
+                                    color: #000;
+                                    font-weight: 600;
+                                    font-size: 20px;
+                                "
+                                class="list-group-item text-center"
+                            >
+                                Contest Name
+                            </li>
+                            <li
+                                style="
+                                    background-color: #fff;
+                                    color: #000;
+                                    font-weight: 600;
+                                "
+                                class="list-group-item text-center"
+                            >
+                                <div>ENDED ON</div>
+                                <div>Jan 22, 04:00 PM IST</div>
+                            </li>
+                            <li
+                                style="
+                                    background-color: #fff;
+                                    color: #000;
+                                    font-weight: 600;
+                                "
+                                class="list-group-item text-center"
+                            >
+                                <div>Posted By</div>
+                                <div>username</div>
+                            </li>
+
+                            <!-- <li class="list-group-item m-0 p-0">
+                                <a href="#" class="btn order-btn pt-2"
+                                    >register</a
+                                >
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Menu -->
+</section>
+<%- include("layouts/footer.ejs") %>

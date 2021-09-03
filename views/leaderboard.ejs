@@ -1,0 +1,94 @@
+<%- include("layouts/header.ejs") %>
+<section>
+    <div class="container">
+        <div class="row pt-md-5 pt-3 pb-4">
+            <div class="col-md-6 col-12 py-md-0 py-2">
+                <!-- <form action=""> -->
+                <div class="form-field col-lg-6 datalist-stuff">
+                    <div class="inline-input">
+                        <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Country"
+                        list="hosting-plan"
+                    />
+                    </div>
+                    
+                    <div class="inline-icon pt-1">
+                        <button onClick="searchCountry()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <datalist id="hosting-plan">
+                        <option value="Competitive Challenges"></option>
+                        <option value="Hackathons"></option>
+                        <option value="Hiring Challenges (Jobs)"></option>
+                        <option value="University Challenges"></option>
+                    </datalist>
+                </div>p.js
+
+                <!-- </form> -->
+            </div>
+
+            <div style="float: right" class="col-md-6 col-12 py-md-0 py-2">
+                <!-- <form action=""> -->
+                <div
+                    style="float: right"
+                    class="form-field col-lg-6 datalist-stuff"
+                >
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="College"
+                        list="hosting-plan"
+                    />
+
+                    <datalist id="hosting-plan">
+                        <option value="Competitive Challenges"></option>
+                        <option value="Hackathons"></option>
+                        <option value="Hiring Challenges (Jobs)"></option>
+                        <option value="University Challenges"></option>
+                    </datalist>
+                </div>
+                <!-- </form> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table shadow p-3 mb-5 table-primary">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Rank</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Country</th>
+                            <th scope="col">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-primary">
+                            <th scope="row">1</th>
+                            <td class="table-primary">Otto</td>
+                            <td class="table-primary">@mdo</td>
+                            <td class="table-primary">@mdo</td>
+                        </tr>
+
+                        <tr class="table-primary">
+                            <th scope="row">2</th>
+                            <td class="table-primary">Thornton</td>
+                            <td class="table-primary">@fat</td>
+                            <td class="table-primary">@mdo</td>
+                        </tr>
+                        <tr class="table-primary">
+                            <th scope="row">3</th>
+                            <td class="table-primary">@twitter</td>
+                            <td class="table-primary">@mdo</td>
+                            <td class="table-primary">@mdo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include("layouts/footer.ejs") %>
